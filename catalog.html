@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>gulp-scss-starter</title>
+        <meta name="theme-color" content="#fff">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+    <body>
+        <header class="header">
+    <div class="container">
+        <div class="header-wrap">
+            <div class="header-top">
+                <div class="header-top__logo"><a href="/"><img src="img/logo.png" alt="VG Avto USA"></a></div>
+                <div class="header-top__contacts">
+                    <a class="header-top__local" href="#"><i class="fa fa-map-marker"></i></a>
+                    <a class="header-top__tel" href="tel:+380633111131"><img src="img/icon--phone-red.png" width="20" alt="Телефон">+38 (063) 311-11-31</a>
+                    <a class="header-top__mail" href="mailto:americarokiev@gmail.com"><img src="img/icon--mail-red.png" width="25" alt="" srcset=""> americarokiev@gmail.com</a>
+                    <a data-fancybox data-src="#myModal" href="javascript:;" class="header-top__btn" href="#">
+                        <i class="fa fa-phone"></i>
+                            Заказать звонок
+                    </a>
+                </div>
+            </div>
+            <div class="navbar">
+                <div class="navbar-wrap">
+                    <input type="checkbox" id="navbar-burger">
+                    <label for="navbar-burger" onclick="openNav()">
+                        <span class="navbar-burger__line one"></span>
+                        <span class="navbar-burger__line two"></span>
+                        <span class="navbar-burger__line three"></span>
+                        <span class="navbar-burger__line four"></span>
+                    </label>
+                    <nav id="mySidenav" class="navbar__menu">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <a href="catalog.html" class="navbar__menu-link">Каталог авто</a>
+                        <a href="#" class="navbar__menu-link">В наличии</a>
+                        <a href="#" class="navbar__menu-link">Доставка</a>
+                        <a href="#" class="navbar__menu-link">Растаможка</a>
+                        <a href="#" class="navbar__menu-link">Отзывы</a>
+                        <a href="#" class="navbar__menu-link">Контакты</a>
+                    </nav>
+                    <a href="#" class="navbar__consultation-link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20"><g><g><path id="icon--plane" fill="#004d83" d="M1.095 8.254L22.012.098c.977-.35 1.825.239 1.5 1.725l-3.56 16.971c-.267 1.197-.977 1.496-1.963.928l-5.424-4.049-2.624 2.543c-.286.29-.532.538-1.094.538l.384-5.574 10.07-9.173c.443-.39-.1-.609-.681-.22L6.194 11.695.839 10.009c-1.144-.398-1.174-1.196.256-1.755z"/></g></g></svg>Онлайн консультация</a>
+                </div>
+                <script>
+                    function openNav() {
+                        document.getElementById("mySidenav").style.width = "250px";
+                    }
+                    function closeNav() {
+                        document.getElementById("mySidenav").style.width = "0";
+                    }   
+                </script>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class="navigation">
+    <div class="container">
+        <div class="navigation-wrap">
+            <div class="breadcrumbs">
+                <ul class="breadcrumbs-menu">
+                    <li><a class="" href="#">Главная</a></li>
+                    <li><a class="active" href="#">Каталог авто</a></li>
+                </ul>
+            </div>
+            <div class="option">
+                <a href="catalog.html" class="option__item"><img src="img/icon--under-the-order-white.png" alt="Под заказ"><span>Под заказ</span></a>
+                <a href="stock.html" class="option__item"><img src="img/icon--in-stock--white.png" alt="В наличии"><span>В наличии</span></a>
+                <a href="delivered.html" class="option__item"><img src="img/icon--delivered--white.png" alt="Доставленные"><span>Доставленные</span></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <main>
+            <div class="page-catalog">
+                <div class="container">
+                    <div class="wrap">
+                        <div class="form-search">
+    <div class="form-search-wrap">
+        <div class="form-search-block">
+            <span class="form-search__title">Подобрать авто</span>
+            <div class="form-search-inner">
+                <div class="sort">
+                    <span>Сортировать по:</span>
+                    <select name="" id="sort">
+                        <option value="1">умолчанию</option>
+                        <option value="2">Самые дорогие</option>
+                        <option value="3">Самые дешевые</option>
+                    </select>
+                </div>
+                <div class="show">
+                    <span>Показать по:</span>
+                    <select name="" id="show">
+                        <option value="1">5 на страницу</option>
+                        <option value="2">10 на страницу</option>
+                        <option value="3">15 на страницу</option>
+                    </select>
+                </div>
+                <div class="type">
+                    <span>Показать по:</span>
+                    <ul>
+                        <li><a href="#"><img src="img/icon--list.png" alt="Список" title="Список"></a></li>
+                        <li><a href="#"><img src="img/icon--grid.png" alt="Сетка" title="Сетка"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="form-search-block">
+            <form action="">
+                <input type="text" class="brand">
+                <div class="years">
+                    <input type="text" class="years__from">
+                    <input type="text" class="years__to">
+                </div>
+                <div class="price">
+                    <input type="text" class="price__of">
+                    <input type="text" class="price__up">
+                </div>
+                <button class="btn form-search__btn"><i class="icon--search"></i>ПОИСК</button>
+            </form>
+        </div>
+    </div>
+</div>
+                        <div class="row">
+                            <div class="block-aside">
+    <div class="filter">
+    <div class="filter__title">Фильтр</div>
+    <button class="filter__close">
+        <span class="line one"></span>
+        <span class="line two"></span>
+    </button>
+    <div class="filter-wrap">
+            <div class="filter-mileage">
+                <div class="filter-mileage__title">Пробег, км</div>
+                <div class="filter-mileage-range">
+                    <div class="col-filter">
+                        <span>От</span>
+                        <input type="text" id="mileageOne" readonly>
+                        <span>До</span>
+                        <input type="text" id="mileageTwo" readonly>
+                    </div>
+                    <div class="col-filter">
+                        <div id="mileage-range"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="filter-volume">
+                <div class="filter-mileage__title">Объём</div>
+                <div class="filter-volume-range">
+                    <div class="col-filter">
+                        <span>От</span>
+                        <input type="text" id="volumeOne" readonly>
+                        <span>До</span>
+                        <input type="text" id="volumeTwo" readonly>
+                    </div>
+                    <div class="col-filter">
+                        <div id="volume-range"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="filter-fuel">
+                <div class="filter-fuel__title">Тип топлива</div>
+                <div class="filter-fuel-list">
+                    <label for="petrol">
+                        <input type="checkbox" name="fuel" id="petrol">
+                        <span>Бензин (124)</span>
+                    </label>
+                    <label for="gas">
+                        <input type="checkbox" name="fuel" id="gas">
+                        <span>Газ (1)</span>
+                    </label>
+                    <label for="hybrid">
+                        <input type="checkbox" name="fuel" id="hybrid">
+                        <span>Гибрид (6)</span>
+                    </label>
+                    <label for="diesel">
+                        <input type="checkbox" name="fuel" id="diesel">
+                        <span>Дизель (9)</span>
+                    </label>
+                </div>
+            </div> 
+            <div class="filter-box">
+                <div class="filter-box__title">Коробка</div>
+                <div class="filter-box-list">
+                    <label for="machine">
+                        <input type="checkbox" name="box" id="machine">
+                        <span>Автомат (140)</span>
+                    </label>
+                    <label for="mechanics">
+                        <input type="checkbox"  name="box" id="mechanics">
+                        <span>Механика (29)</span>
+                    </label>
+                </div>
+            </div> 
+            <div class="filter-drive">
+                <div class="filter-drive__title">Привод</div>
+                <div class="filter-drive-list">
+                    <label for="rear">
+                        <input type="checkbox" name="drive" id="rear">
+                        <span>Задний (36)</span>
+                    </label>
+                    <label for="front">
+                        <input type="checkbox" name="drive" id="front">
+                        <span>Передний (85)</span>
+                    </label>
+                    <label for="">
+                        <input type="checkbox" name="drive" id="">
+                        <span>Полный (19)</span>
+                    </label>
+                </div>
+            </div> 
+    </div>
+</div>
+    <div class="popul-news block">
+    <div class="popul-news-wrap">
+        <div class="popul-news__title">Популярные новости</div>
+        <ul class="list">
+            <li class="item"><a href=""><img src="img/news-1-thumb.jpg" alt=""><span>Популярные авто из Америки</span></a></li>
+            <li class="item"><a href=""><img src="img/news-2-thumb.jpg" alt=""><span>Растаможка авто 2019: чего ожидать?</span></a></li>
+            <li class="item"><a href=""><img src="img/news-3-thumb.jpg" alt=""><span>Доставка авто из США в Литву</span></a></li>
+            <li class="item"><a href=""><img src="img/news-4-thumb.jpg" alt=""><span>Доставка авто из США в Германию</span></a></li>
+            <li class="item"><a href=""><img src="img/news-5-thumb.jpg" alt=""><span>Как пригнать авто из США в Украину</span></a></li>
+        </ul>
+    </div>
+</div>
+</div>
+<div class="block-list">
+    <div class="car-list">
+        <div class="car-wrap">
+            <!-- Авто 1 -->
+            <div class="car-item">
+                <a class="car-item__pic" href="#"><img src="img/car/mazda_cx_7.png" alt="Mazda CX 7"></a>
+                <div class="car-item__detail">
+                    <header>
+                        <a href="#"><h5 class="car-item__title">Mazda CX 7</h5></a>
+                        <div class="car-item__price">$7 500</div>
+                    </header>
+                    <ul class="car-item__facilities-list">
+                        <li><img src="img/icon--year.png" alt="Год"><span>Год:</span>2014</li>
+                        <li><img src="img/icon--mileage.png" alt="Пробег"><span>Пробег:</span>116 937 км</li>
+                        <li><img src="img/icon--box.png" alt="Коробка"><span>Коробка:</span>Автомат</li>
+                        <li><img src="img/icon--condition.png" alt="Состояние"><span>Состояние:</span><img src="img/5-stars.png" alt="5 звезд"></li>
+                        <li><img src="img/icon--drive.png" alt="Привод"><span>Привод:</span>Передний</li>
+                        <li><img src="img/icon--fuel.png" alt="Тип топлива"><span>Тип топлива:</span>Бензин</li>
+                    </ul>
+                    <!-- <a href="card.html" class="btn car-item__btn-link">Подробнее</a> -->
+                </div>
+            </div>
+            <!-- Авто 2 -->
+            <div class="car-item">
+                <a class="car-item__pic" href="#"><img src="img/car/mazda_cx_7.png" alt="Mazda CX 7"></a>
+                <div class="car-item__detail">
+                    <header>
+                        <a href="#"><h5 class="car-item__title">Mazda CX 7</h5></a>
+                        <div class="car-item__price">$7 500</div>
+                    </header>
+                    <ul class="car-item__facilities-list">
+                        <li><img src="img/icon--year.png" alt="Год"><span>Год:</span>2014</li>
+                        <li><img src="img/icon--mileage.png" alt="Пробег"><span>Пробег:</span>116 937 км</li>
+                        <li><img src="img/icon--box.png" alt="Коробка"><span>Коробка:</span>Автомат</li>
+                        <li><img src="img/icon--condition.png" alt="Состояние"><span>Состояние:</span><img src="img/5-stars.png" alt="5 звезд"></li>
+                        <li><img src="img/icon--drive.png" alt="Привод"><span>Привод:</span>Передний</li>
+                        <li><img src="img/icon--fuel.png" alt="Тип топлива"><span>Тип топлива:</span>Бензин</li>
+                    </ul>
+                    <!-- <a href="card.html" class="btn car-item__btn-link">Подробнее</a> -->
+                </div>
+            </div>
+            <!-- Авто 3 -->
+            <div class="car-item">
+                <a class="car-item__pic" href="#"><img src="img/car/mazda_cx_7.png" alt="Mazda CX 7"></a>
+                <div class="car-item__detail">
+                    <header>
+                        <a href="#"><h5 class="car-item__title">Mazda CX 7</h5></a>
+                        <div class="car-item__price">$7 500</div>
+                    </header>
+                    <ul class="car-item__facilities-list">
+                        <li><img src="img/icon--year.png" alt="Год"><span>Год:</span>2014</li>
+                        <li><img src="img/icon--mileage.png" alt="Пробег"><span>Пробег:</span>116 937 км</li>
+                        <li><img src="img/icon--box.png" alt="Коробка"><span>Коробка:</span>Автомат</li>
+                        <li><img src="img/icon--condition.png" alt="Состояние"><span>Состояние:</span><img src="img/5-stars.png" alt="5 звезд"></li>
+                        <li><img src="img/icon--drive.png" alt="Привод"><span>Привод:</span>Передний</li>
+                        <li><img src="img/icon--fuel.png" alt="Тип топлива"><span>Тип топлива:</span>Бензин</li>
+                    </ul>
+                    <!-- <a href="card.html" class="btn car-item__btn-link">Подробнее</a> -->
+                </div>
+            </div>
+            <!-- Авто 4 -->
+            <div class="car-item">
+                <a class="car-item__pic" href="#"><img src="img/car/mazda_cx_7.png" alt="Mazda CX 7"></a>
+                <div class="car-item__detail">
+                    <header>
+                        <a href="#"><h5 class="car-item__title">Mazda CX 7</h5></a>
+                        <div class="car-item__price">$7 500</div>
+                    </header>
+                    <ul class="car-item__facilities-list">
+                        <li><img src="img/icon--year.png" alt="Год"><span>Год:</span>2014</li>
+                        <li><img src="img/icon--mileage.png" alt="Пробег"><span>Пробег:</span>116 937 км</li>
+                        <li><img src="img/icon--box.png" alt="Коробка"><span>Коробка:</span>Автомат</li>
+                        <li><img src="img/icon--condition.png" alt="Состояние"><span>Состояние:</span><img src="img/5-stars.png" alt="5 звезд"></li>
+                        <li><img src="img/icon--drive.png" alt="Привод"><span>Привод:</span>Передний</li>
+                        <li><img src="img/icon--fuel.png" alt="Тип топлива"><span>Тип топлива:</span>Бензин</li>
+                    </ul>
+                    <!-- <a href="card.html" class="btn car-item__btn-link">Подробнее</a> -->
+                </div>
+            </div>
+            <!-- Авто 5 -->
+            <div class="car-item">
+                <a class="car-item__pic" href="#"><img src="img/car/mazda_cx_7.png" alt="Mazda CX 7"></a>
+                <div class="car-item__detail">
+                    <header>
+                        <a href="#"><h5 class="car-item__title">Mazda CX 7</h5></a>
+                        <div class="car-item__price">$7 500</div>
+                    </header>
+                    <ul class="car-item__facilities-list">
+                        <li><img src="img/icon--year.png" alt="Год"><span>Год:</span>2014</li>
+                        <li><img src="img/icon--mileage.png" alt="Пробег"><span>Пробег:</span>116 937 км</li>
+                        <li><img src="img/icon--box.png" alt="Коробка"><span>Коробка:</span>Автомат</li>
+                        <li><img src="img/icon--condition.png" alt="Состояние"><span>Состояние:</span><img src="img/5-stars.png" alt="5 звезд"></li>
+                        <li><img src="img/icon--drive.png" alt="Привод"><span>Привод:</span>Передний</li>
+                        <li><img src="img/icon--fuel.png" alt="Тип топлива"><span>Тип топлива:</span>Бензин</li>
+                    </ul>
+                    <!-- <a href="card.html" class="btn car-item__btn-link">Подробнее</a> -->
+                </div>
+            </div>       
+        </div>
+        <div class="pagination">
+    <ul class="pagination-list">
+        <li class="pagination-list__prev"><a href="#">вперед</a></li">
+        <li class="pagination-list__link active"><a href="#">1</a></li>
+        <li class="pagination-list__link"><a href="#">2</a></li>
+        <li class="pagination-list__link"><a href="#">3</a></li>
+        <li class="pagination-list__link"><a href="#">4</a></li>
+        <li class="pagination-list__next"><a href="#">назад</a></li>
+    </ul>
+</div>
+    </div>
+</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+    <div class="container">
+        <div class="footer-wrap">
+            <div class="footer-block">
+                <nav class="footer__menu">
+                    <ul>
+                        <li>Каталог авто</li>
+                        <li>В наличии</li>
+                        <li>Доставка</li>
+                        <li>Растаможка</li>
+                        <li>Отзывы</li>
+                        <li>Контакты</li>
+                    </ul>
+                </nav>
+                <div class="footer__contacts">
+                    <span>КОНТАКТЫ</span>
+                    <address><i class="icon--point"></i>г.Киев, ул. Игоря Брановицкого (Перспективная), 4</address>
+                    <a href="tel:++380633111131">+38 (063) 311-11-31</a class="footer__link">
+                    <a href="mailto:americarokiev@gmail.com">americarokiev@gmail.com</a>
+                </div>
+                <div class="footer__form">
+                    <span>БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ</span>
+                    <form action="">
+                        <input type="tel" placeholder="+38 099 000 00 00">
+                        <button class="btn footer__btn">ОТПРАВИТЬ</button>
+                    </form>
+                    <ul class="footer__social">
+                        <li><a href="#"><img src="img/icon--facebook.png" alt="Facebook"></a></li>
+                        <li><a href="#"><img src="img/icon--telegram.png" alt="Telegram"></a></li>
+                        <li><a href="#"><img src="img/icon--viber.png" alt="Viber"></a></li>
+                        <li><a href="#"><img src="img/icon--youtube.png" alt="Youtube"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-block">
+                <div class="footer__reserved">© AMERICARO​ | Все права защищены</div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Модальное окно -->
+<div id="myModal" style="display: none;">
+    <div class="modal-box">
+        <div class="modal__title">Обратный звонок</div>
+        <form action="">
+            <input type="text" id="modal-name" class="modal__input" placeholder="Ваше имя">
+            <input type="tel" id="modal-tel" class="modal__input" placeholder="Номер телефона">
+            <button class="btn modal__btn">Отправить</button>
+        </form>
+    </div>
+</div>
+
+<!-- Модальное окно -->
+<div id="order-calc1" style="display: none;">
+    <div class="modal-box modal-box-area">
+        <div class="modal__title">Заказ просчета</div>
+        <form action="">
+            <input type="text" id="modal-name" class="modal__input" placeholder="Ваше имя">
+            <input type="tel" id="modal-tel" class="modal__input" placeholder="Номер телефона">
+            <textarea  name="text" id="modal-txt" class="modal__textarea" cols="20" rows="10" placeholder="Сообщение..."></textarea>
+            <button class="btn modal__btn">Отправить</button>
+        </form>
+    </div>
+</div>
+
+<!-- Модальное окно -->
+<div id="order-calc" style="display: none;">
+    <div class="modal-box modal-box-area">
+        <div class="modal__title">Заказ просчета</div>
+        <form action="">
+            <input type="text" id="modal-name" class="modal__input" placeholder="Ваше имя">
+            <input type="tel" id="modal-tel" class="modal__input" placeholder="Номер телефона">
+            <textarea  name="text" id="modal-txt" class="modal__textarea" cols="20" rows="10" placeholder="Сообщение..."></textarea>
+            <button class="btn modal__btn">Отправить</button>
+        </form>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/vendor.js"></script>
+<script> new WOW().init(); </script>
+
+        
+        <script>
+            $( function() {
+                // mileage volume
+                $( "#mileage-range" ).slider({
+                    range: true,
+                    min: 0,
+                    max: 500,
+                    values: [ 0, 300 ],
+                    slide: function( event, ui ) {
+                        $( "#mileageOne" ).val( "$" + ui.values[ 0 ]);
+                        $( "#mileageTwo" ).val( "$" + ui.values[ 1 ]);
+                    }
+                });
+                $( "#mileageOne" ).val( "$" + $( "#mileage-range" ).slider( "values", 0 ));
+                $( "#mileageTwo" ).val( "$" + $( "#mileage-range" ).slider( "values", 1 ));
+                // range volume
+                $( "#volume-range" ).slider({
+                    range: true,
+                    min: 0,
+                    max: 500,
+                    values: [ 0, 300 ],
+                    slide: function( event, ui ) {
+                        $( "#volumeOne" ).val( "$" + ui.values[ 0 ]);
+                        $( "#volumeTwo" ).val( "$" + ui.values[ 1 ]);
+                    }
+                });
+                $( "#volumeOne" ).val( "$" + $( "#volume-range" ).slider( "values", 0 ));
+                $( "#volumeTwo" ).val( "$" + $( "#volume-range" ).slider( "values", 1 ));
+                // display none
+                // $(".filter__title").click(function() {
+                //         e = $(this).closest('.filter').find('.filter-wrap');
+                //         if(!e.is(':visible')) {
+                //         $('.filter-wrap').hide();
+                //         e.show();
+                //     }
+                // });
+                $(document).ready(function() {
+                    $('.filter').on('click', '.filter__close', function() {
+                        $(this).toggleClass('db').siblings('.filter-wrap').slideToggle(0);
+                    });
+                });
+                // $(".filter__title").click(function(){   
+                //     $(this).next(".filter-mileage-none").show();
+                // });
+            });
+        </script>
+    </body>
+</html>
