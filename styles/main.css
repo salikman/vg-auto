@@ -13025,6 +13025,22 @@ section {
   margin-right: 0;
 }
 
+.form-search .form-search-1 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.form-search .form-search-1 .form-search__btn {
+  margin-top: 0;
+}
+
+.form-search .form-search-1 input {
+  padding: 0 10px;
+}
+
 .form-search form {
   display: flex;
   flex-wrap: wrap;
@@ -14759,6 +14775,21 @@ section {
 
   .navigation .option:before {
     display: none;
+  }
+
+  .form-search-1 {
+    flex-direction: column;
+  }
+
+  .form-search-1 span {
+    text-align: center;
+  }
+
+  .form-search-1 input.brand {
+    margin: 15px 0;
+    padding: 0;
+    max-width: 100% !important;
+    width: 100%;
   }
 
   .shortlist-item {
