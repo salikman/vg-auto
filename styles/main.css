@@ -11232,29 +11232,6 @@ section {
   margin: 10% auto;
 }
 
-.modal-box .close,
-.modal-box .close1,
-.modal-box .close2 {
-  position: absolute;
-  top: 8px;
-  right: 20px;
-  color: #f02330;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.modal-box .close:hover,
-.modal-box .close1:hover,
-.modal-box .close2:hover
-.close:focus,
-.modal-box .close1:focus,
-.modal-box .close2:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
 .modal__title {
   margin-bottom: 25px;
   font-family: 'Montserrat', sans-serif;
@@ -11283,6 +11260,34 @@ section {
 .modal__textarea {
   resize: vertical;
   height: 100%;
+}
+
+.modal__files {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.modal__files label {
+  display: block;
+  margin: 10px 0;
+}
+
+.modal__files label input {
+  margin-top: 10px;
+}
+
+.modal__files label input[type=text] {
+  padding: 15px 25px;
+  width: 100%;
+  border: 1px solid #e4e4e4;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #a8a8a8;
+}
+
+.modal__files label input[type=text]:hover {
+  color: #000;
 }
 
 .modal__btn {
@@ -12654,6 +12659,16 @@ section {
 .reviews-item__img a.review-video-full {
   width: 100%;
   height: 340px;
+}
+
+.reviews__btn-link {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 15px;
+  max-width: 270px;
+  width: 100%;
+  font-weight: 700;
 }
 
 .navigation {
